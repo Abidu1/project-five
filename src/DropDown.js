@@ -26,7 +26,7 @@ class DropDown extends Component {
           </select>
   
           <button
-            onClick={ (event) => this.props.getUserInput(event, this.state.userSelection) }
+            onClick={ (event) => this.props.getProduct(event, this.state.userSelection) }
           > Submit
           </button>
           </div>

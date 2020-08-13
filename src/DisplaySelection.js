@@ -2,12 +2,17 @@ import React from 'react';
 
 const DisplaySection = ( props ) => {
     return(
-      <main>
+      <main class="imageDisplay">
         {
           props.item.map((displayItem) => {
             return(
-                <h3 key={displayItem._id} >{displayItem.name}</h3>
-            );    
+                <div key={displayItem._id} >
+                <div>
+                  <img src={displayItem.image_link}></img> 
+                  <h2>{displayItem.name}</h2> 
+                </div>
+                </div>
+          );    
           })
          }
       </main>

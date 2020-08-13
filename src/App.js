@@ -8,8 +8,15 @@ import './App.css';
 //dropdown component 
 
 class App extends Component{
+  constructor() {
+    super()
+    this.state = {
+      currentProducts: []
+    }
+  }
 
-  getProduct = (userChoice) =>  {
+  getProduct = (event,userChoice) =>  {
+    event.preventDefault();
       //run getProduct with userChoice as an argument 
     axios({ 
       url: `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${userChoice} `,
@@ -32,12 +39,12 @@ class App extends Component{
 
   render(){
       return (
-        // drop down 
-        //div should render a loop through your page
         <div className="App">
+          <div class="wrapper">
           <Header />
-          <DropDown getUserInput={ this.getUserInput } / >
-          {/* <DisplaySection item={this.getProduct} /> */}
+          <DropDown getProduct={ this.getProduct } / >
+          <DisplaySection items={this.state.currentProducts} />
+          </div>
         </div>
       );
   }
