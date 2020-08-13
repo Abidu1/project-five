@@ -40,11 +40,9 @@ class App extends Component{
   render(){
       return (
         <div className="App">
-          <div class="wrapper">
           <Header />
           <DropDown getProduct={ this.getProduct } / >
           <DisplaySection items={this.state.currentProducts} />
-          </div>
         </div>
       );
   }

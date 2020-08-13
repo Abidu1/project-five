@@ -2,22 +2,22 @@ import React from 'react';
 
 const DisplaySection = ( props ) => {
     return(
-      <main class="imageDisplay">
+      <section class="imageDisplay">
         {
-          props.item.map((displayItem) => {
+          props.items.map((displayItem) => {
             return(
-                <div key={displayItem._id} >
-                <div>
-                  <img src={displayItem.image_link}></img> 
-                  <h2>{displayItem.name}</h2> 
-                </div>
-                </div>
+            <div key={displayItem._id} >
+              <div>
+                  <img src={displayItem.image_link} alt={displayItem.name}></img> 
+                  <p>{displayItem.name}</p> 
+              </div>
+            </div>
           );    
-          })
-         }
-      </main>
-    )
-  }
+        })
+      }
+    </section>
+  )
+}
 
 
 export default DisplaySection;
