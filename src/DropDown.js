@@ -17,8 +17,8 @@ class DropDown extends Component {
     render() {
       return(
         <form>
-          
-          <label htmlFor="makeupProduct">Choose a Makeup Product!</label>
+          <div class="dropDownForm">
+          <label htmlFor="makeupProduct"></label>
           <select onChange={ this.userpicks } name="makeupProduct" id="makeupProduct">
             <option value="lipstick">Lipsticks</option>
             <option value="eyeshadow">Eye Shadow</option>
@@ -29,6 +29,7 @@ class DropDown extends Component {
             onClick={ (event) => this.props.getUserInput(event, this.state.userSelection) }
           > Submit
           </button>
+          </div>
   
         </form>
       )

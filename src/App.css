@@ -12,16 +12,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -36,15 +27,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 header{
@@ -74,12 +56,38 @@ p{
   font-size:1.5rem;
   margin-top:10px;
   color:black;
-  
-
 }
 
 h1{
   color:#576490
 }
 
+
+.dropDownForm{
+  height:30%;
+}
+
+select,
+option{
+  width:60%;
+  text-align: center;
+  height:60px;
+  margin:10px;
+  border-radius: 10px;
+  /* border: 5px solid rgb(253, 138, 157); */
+  border: 5px solid #7796CB;
+  font-size:1.5rem;
+  text-transform: uppercase;
+  color:#576490;
+  background:#C9CAD9;
+}
+
+button{
+  border: 5px solid #7796CB;
+  font-size:1.5rem;
+  text-transform: uppercase;
+  background:#7796CB;
+  border-radius: 10px;
+  color:white;
+}
 
