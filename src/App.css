@@ -141,17 +141,16 @@ input{
 
 .postSection form{
   margin: 0 auto;
-  width:100%;
+  width:80%;
 }
 
-.submitButton{
+button{
   border: 5px solid #7796CB;
   font-size: calc(2rem + 1vw);
   text-transform: uppercase;
   background:#7796CB;
   border-radius: 10px;
   color:white;
-  width:20%;
 
 }
 
@@ -165,6 +164,20 @@ input{
   background:#576490;
   border-radius: 10px;
   color:white;
+}
+
+
+/* Media Queries */
+@media (max-width: 600px){
+  .imageDisplay{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px){
+  .imageDisplay{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
