@@ -51,6 +51,13 @@ main{
   background:#576490
 }
 
+footer{
+  background:#A3BCF9;
+  padding-top:10px;
+}
+
+
+
 .imageDisplay{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -60,9 +67,9 @@ main{
   padding:20px;
 }
 
-.imageDisplay div{
+/* .imageDisplay div{
   border: 6px solid #A3BCF9;
-}
+} */
 
 
 img{
@@ -78,7 +85,7 @@ p{
 }
 
 h1{
-  color:#576490
+  color:#576490;
 }
 
 

@@ -3,6 +3,7 @@ import Header from './Header.js';
 import axios from 'axios';
 import DropDown from './DropDown'
 import DisplaySection from './DisplaySelection.js'
+import Footer from './Footer'
 import './App.css';
 //on change 
 //dropdown component 
@@ -43,6 +44,7 @@ class App extends Component{
           <Header />
           <DropDown getProduct={ this.getProduct } / >
           <DisplaySection items={this.state.currentProducts} />
+          <Footer/>
         </div>
       );
   }
