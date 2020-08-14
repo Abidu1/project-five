@@ -21,10 +21,8 @@ const DisplaySection = ( props ) => {
           );    
         })
       }
-    </section>
-    
+    </section> 
   )
- 
 }
 
 

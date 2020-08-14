@@ -50,7 +50,7 @@ class App extends Component{
           <Header />
           <DropDown getProduct={ this.getProduct } / >
           <DisplaySection items={this.state.currentProducts} />
-          <ReviewMakeup />
+				  <ReviewMakeup />
           <Footer/>
         </div>
       );

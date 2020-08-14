@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <header>
         <div class ="wrapper">
-          <h1>Welcome to MakeAPin!</h1>
+          <h1>Welcome to Makeup Finder!</h1>
           <p>This website is designed to help you find makeup products!</p>
         </div>
       </header>
