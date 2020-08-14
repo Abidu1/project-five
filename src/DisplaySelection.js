@@ -11,9 +11,10 @@ const DisplaySection = ( props ) => {
             return(
             <div class="wrapper">
               <div key={displayItem._id} >
-                <div>
+                <div class="makeupItems">
                     <img src={displayItem.image_link} alt={displayItem.name}></img> 
-                    <p>{displayItem.name}</p>           
+                    <p>{displayItem.name}</p>    
+                    <a href={displayItem.product_link}>Buy Now</a>     
                 </div>
             </div>
             </div>

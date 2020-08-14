@@ -49,6 +49,7 @@ userPost = (event) => {
 //User has submitted their review so they submit an object to firebase
 postSubmission = (event) => {
     event.preventDefault();
+    if(this.state.review !== ""){}
     const dbRef = firebase.database().ref('productReviews');
     dbRef.push(this.state.review);
 
@@ -67,14 +68,14 @@ render () {
     return (
     <div class="postSection">
         <form action="submit">
-        <input onChange={this.userPost} type="textarea" minLength="20" maxLength="300" value={this.state.review}/>
+        <input onChange={this.userPost} type="textarea" minLength="20" maxLength="300" value={this.state.review} placeholder="Write a review here!"/>
         <button class="submitButton" onClick={this.postSubmission}>Submit</button>
         </form>
 
         { this.state.submittedData.map((review) => {
             return (
             <div class="addedUserReview">
-                <li key={review.id}></li>
+                <div key={review.id}></div>
                 <p>{review.post}</p>
                 <button class="delete" onClick={ () => this.removeSubmission(review.id)}>Delete Review</button>
                 
