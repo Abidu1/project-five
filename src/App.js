@@ -1,49 +1,56 @@
 import React, { Component } from 'react';
-import Header from './Header.js';
+import './App.css';
 import axios from 'axios';
+import firebaseApp from './firebaseApp';
+import Header from './Header.js';
 import DropDown from './DropDown'
 import DisplaySection from './DisplaySelection.js'
+import ReviewMakeup from './ReviewMakeup.js'
 import Footer from './Footer'
-import './App.css';
-//on change 
-//dropdown component 
+
+
+
 
 class App extends Component{
   constructor() {
     super()
     this.state = {
-      currentProducts: []
+      currentProducts: [],
     }
   }
-
+//Making an Api call and putting userchoice to get different product types
   getProduct = (event,userChoice) =>  {
     event.preventDefault();
-      //run getProduct with userChoice as an argument 
+      // run getProduct with userChoice as an argument 
     axios({ 
       url: `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${userChoice} `,
       method: `GET`,
       responseType: `json`
     })
-    .then( (response) => {
-        console.log(response)
+    .then( (result) => {
+        console.log(result)
       this.setState({
-        currentProducts: response.data
-      
-      })
-    })
-  }
-
-    getUserInput = (event) => {
-      event.preventDefault();
+      //using the data from the api call into a state
+        currentProducts: result.data
+      }
+    );
+  })
   }
 
 
+//Getting user input
+  getUserInput = (event) => {
+    event.preventDefault();
+  }
+
+//putting different components together 
   render(){
       return (
         <div className="App">
           <Header />
           <DropDown getProduct={ this.getProduct } / >
           <DisplaySection items={this.state.currentProducts} />
+          <ReviewMakeup />
           <Footer/>
         </div>
       );
@@ -51,3 +58,4 @@ class App extends Component{
 }
 
 export default App;
+

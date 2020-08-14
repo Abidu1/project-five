@@ -6,7 +6,34 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 *, *:before, *:after {box-sizing: inherit}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+ 
+html {
+  font-size: 62.5%; 
+} 
 
+
+/* stripping of styles */
+body,
+ul,
+h1,
+h2,
+h3
+p {
+margin: 0;
+padding: 0;
+}
+
+body{
+  background:#A3BCF9;
+}
+
+
+img {
+width: 80%;
+height: auto;
+display: block;
+border-radius: 10px;
+} 
 
 .wrapper {
   width: 90%;
@@ -21,18 +48,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-
 header,
 option,
 select,
@@ -41,19 +56,30 @@ p{
   font-family: 'Gothic A1', sans-serif;
 }
 
+.imageDisplay p{
+  width:80%;
+  font-weight:300;
+}
+
 header{
   padding-top:100px;
   height:50vh;
   background:#D1D2F9;
 }
 
+h1{
+  font-size: calc(2.5rem + 1vw);
+  font-weight:900;
+}
+
 main{
   background:#576490
 }
 
-footer{
+footer,
+.reviewSection{
   background:#A3BCF9;
-  padding-top:10px;
+  padding:10px;
 }
 
 
@@ -67,21 +93,15 @@ footer{
   padding:20px;
 }
 
-/* .imageDisplay div{
-  border: 6px solid #A3BCF9;
-} */
-
-
-img{
-  width:50%;
-  border-radius: 10px;
-  /* border:10px solid #A3BCF9 */
-}
 
 p{
-  font-size:1rem;
+  font-size: calc(1rem + 1vw);
   margin-top:10px;
   color:black;
+}
+
+footer p{
+  margin-top:100px;
 }
 
 h1{
@@ -94,26 +114,57 @@ h1{
 }
 
 select,
-option{
-  width:60%;
+option,
+input
+{
+  width:55%;
   text-align: center;
-  height:60px;
   margin:10px;
   border-radius: 10px;
-  /* border: 5px solid rgb(253, 138, 157); */
   border: 5px solid #7796CB;
-  font-size:1.5rem;
-  text-transform: uppercase;
   color:#576490;
   background:#C9CAD9;
 }
 
-button{
+select,
+option{
+  height:60px;
+  font-size:calc(2.5rem + 1vw);
+  text-transform: uppercase;
+
+}
+
+input{
+  height:100px;
+  font-size: calc(1rem + 1vw)
+}
+
+.postSection form{
+  margin: 0 auto;
+  width:100%;
+}
+
+.submitButton{
   border: 5px solid #7796CB;
-  font-size:1.5rem;
+  font-size: calc(2rem + 1vw);
   text-transform: uppercase;
   background:#7796CB;
   border-radius: 10px;
   color:white;
+  width:20%;
+
 }
+
+.addedUserReview{
+  padding-top:50px;
+}
+
+.delete{
+  border: 5px solid #576490;
+  font-size: calc(0.5rem + 1vw);
+  background:#576490;
+  border-radius: 10px;
+  color:white;
+}
+
 

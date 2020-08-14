@@ -22,11 +22,11 @@ class DropDown extends Component {
               <div class="dropDownForm">
                 <label htmlFor="makeupProduct"></label>
                 <select onChange={ this.userpicks } name="makeupProduct" id="makeupProduct">
-                  <option value="lipstick">Lipsticks</option>
-                  <option value="eyeshadow">Eye Shadow</option>
+                  <option value="lipstick">Lipstick</option>
+                  <option value="eyeshadow">EyeShadow</option>
                   <option value="blush">Blush</option>
                 </select>
-                <button
+                <button class="submitButton"
                   onClick={ (event) => this.props.getProduct(event, this.state.userSelection) }
                 > Submit
                 </button>
