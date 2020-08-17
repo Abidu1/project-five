@@ -7,6 +7,7 @@ import DropDown from './DropDown'
 import DisplaySection from './DisplaySelection.js'
 import ReviewMakeup from './ReviewMakeup.js'
 import Footer from './Footer'
+import DisplaySelection from './DisplaySelection.js';
 
 
 
@@ -28,7 +29,6 @@ class App extends Component{
       responseType: `json`
     })
     .then( (result) => {
-        console.log(result)
       this.setState({
       //using the data from the api call into a state
         currentProducts: result.data

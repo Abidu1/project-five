@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReviewMakeup from './ReviewMakeup';
 
 class DropDown extends Component {
     constructor() {
@@ -26,6 +27,7 @@ class DropDown extends Component {
                   <option value="eyeshadow">EyeShadow</option>
                   <option value="blush">Blush</option>
                 </select>
+                
                 <button class="submitButton"
                   onClick={ (event) => this.props.getProduct(event, this.state.userSelection) }
                 > Submit
